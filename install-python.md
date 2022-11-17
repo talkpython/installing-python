@@ -38,7 +38,7 @@ C:\users\username\> python -V
 Python 3.10.1
 ```
 
-If you see this and the reported version number is sufficently high (often 3.9 or higher), **you are good to go**. 
+If you see this and the reported version number is sufficiently high (often 3.9 or higher), **you are good to go**. 
 
 #### 2.7? Uh oh, your Python is badly outdated!
 
@@ -65,7 +65,7 @@ C:\users\username\> python -V
 Python was not found; run without arguments to install from the Windows Store...
 ```
 
-Looks like you do not have Python at all. **You will need to continue below to install Python 3**. When you see this specific error message, it means that Python is not installed. What is running is a shim program meant to help you install Python 3 from the Windows Store (one option below). You can select this option by simplying typing `python` and following along in the UI.
+Looks like you do not have Python at all. **You will need to continue below to install Python 3**. When you see this specific error message, it means that Python is not installed. What is running is a shim program meant to help you install Python 3 from the Windows Store (one option below). You can select this option by simplifying typing `python` and following along in the UI.
 
 
 ### Step 3. You need Python, install it on Windows
@@ -142,10 +142,10 @@ The Windows Store version of Python is a good option. It's the easiest way to ge
 
 **Install steps - Chocolatey package manager on Windows**
 
-1. Install Chacolatey - [**steps here**](https://docs.chocolatey.org/en-us/choco/setup)
+1. Install Chocolatey - [**steps here**](https://docs.chocolatey.org/en-us/choco/setup)
 2. Open an **[administrator command prompt](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/)**
 3. Install the latest Python: `choco install python`
-4. Peridocially check for a new release: Open admin command prompt and run `choco upgrade python`
+4. Periodically check for a new release: Open admin command prompt and run `choco upgrade python`
 5. Close all terminal and command prompt windows and reopen one (to refresh the path)
 6. Run `python -V` in a new terminal window to verify you have Python now working
 
@@ -161,7 +161,7 @@ The Windows Store version of Python is a good option. It's the easiest way to ge
 
 **Cons**
 
-* Generally uses [conda environements](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) rather than [Python's virtual environments](https://www.geeksforgeeks.org/python-virtual-environment/) - this can lead to a mismatch in instructions when Anaconda is not the primary tool used.
+* Generally uses [conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) rather than [Python's virtual environments](https://www.geeksforgeeks.org/python-virtual-environment/) - this can lead to a mismatch in instructions when Anaconda is not the primary tool used.
 * Packages available here often lag behind in release schedule from PyPI / pip
 * Often one whole version behind on Python (e.g. 3.9 rather than 3.10)
 
@@ -197,7 +197,7 @@ $ python3 -V
 Python 3.10.1
 ```
 
-If you see this and the reported version number is sufficently high (often 3.6 or higher), **you are good to go**. 
+If you see this and the reported version number is sufficiently high (often 3.6 or higher), **you are good to go**. 
 
 #### 2.7? Uh oh, your Python is badly outdated!
 
@@ -247,7 +247,7 @@ Looks like you do not have Python 3 at all. **You will need to continue below to
 1. Install Homebrew - [**steps here**](https://brew.sh/)
 2. Open a **[terminal](https://www.makeuseof.com/open-terminal-on-mac/)**
 3. Install the latest Python: `brew install python`
-4. Peridocially check for a new release: Open terminal and run `brew update` then `brew upgrade`
+4. Periodically check for a new release: Open terminal and run `brew update` then `brew upgrade`
 5. **CAREFUL**: Take careful note of any messages shown - sometimes you must [update your path](https://coolestguidesontheplanet.com/add-shell-path-osx/) (varies by default shell: bash, zsh, etc.) for this version to be located.
 5. Close all terminal windows
 6. Run `python3 -V` in a new terminal window to verify you have Python now working
@@ -289,7 +289,7 @@ The Python official installer can be found on **[python.org](http://python.org)*
 
 **Cons**
 
-* Generally uses [conda environements](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) rather than [Python's virtual environments](https://www.geeksforgeeks.org/python-virtual-environment/) - this can lead to a mismatch in instructions when Anaconda is not the primary tool used.
+* Generally uses [conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) rather than [Python's virtual environments](https://www.geeksforgeeks.org/python-virtual-environment/) - this can lead to a mismatch in instructions when Anaconda is not the primary tool used.
 * Packages available here often lag behind in release schedule from PyPI / pip
 * Often one whole version behind on Python (e.g. 3.9 rather than 3.10)
 
@@ -327,7 +327,7 @@ $ python3 -V
 Python 3.10.1
 ```
 
-If you see this and the reported version number is sufficently high (often 3.6 or higher), **you are good to go**. 
+If you see this and the reported version number is sufficiently high (often 3.6 or higher), **you are good to go**. 
 
 #### 2.7? Uh oh, your Python is badly outdated!
 
@@ -397,7 +397,7 @@ Ubuntu manages it's installed software using **[apt](https://ubuntu.com/server/d
 
 **Cons**
 
-* Generally uses [conda environements](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) rather than [Python's virtual environments](https://www.geeksforgeeks.org/python-virtual-environment/) - this can lead to a mismatch in instructions when Anaconda is not the primary tool used.
+* Generally uses [conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) rather than [Python's virtual environments](https://www.geeksforgeeks.org/python-virtual-environment/) - this can lead to a mismatch in instructions when Anaconda is not the primary tool used.
 * Packages available here often lag behind in release schedule from PyPI / pip
 * Often one whole version behind on Python (e.g. 3.9 rather than 3.10)
 
