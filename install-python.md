@@ -2,7 +2,7 @@
 
 <img src="https://training.talkpython.fm/static/img/cms/nopy-final.jpg" style="border-radius: 10px; display: block;" class="img img-responsive" />
 
-Welcome soon to be Python user! Python is one of the easiest programming languages to learn and grow with. But there are a few bumps right at the beginning. **One of these bumps is to make sure you have Python installed** and that it's a sufficiently new version (generally 3.9+ is solid these days).
+Welcome soon to be Python user! Python is one of the easiest programming languages to learn and grow with. But there are a few bumps right at the beginning. **One of these bumps is to make sure you have Python installed** and that it's a sufficiently new version (generally 3.10+ is solid these days).
 
 Because how you install and verify Python varies by operating system, we've put together this short guide. It's goal is to give you exposure to the various ways on your operating system to **install and maintain Python in a concise and no-nonsense manner**. So with out further ado, let's get you setup! 
 
@@ -35,7 +35,7 @@ The output should be one of the following (*version numbers will vary*). **C:\us
 
 ```
 C:\users\username\> python -V
-Python 3.11.0
+Python 3.12.0
 ```
 
 If you see this and the reported version number is sufficiently high (often 3.9 or higher), **you are good to go**. 
@@ -118,7 +118,7 @@ The Windows Store version of Python is a good option. It's the easiest way to ge
 
 1. Open the Microsoft Store on Windows
 2. Search for Python
-3. Find the latest version of Python from Microsoft (currently lists 3.7, 3.8, 3.9, 3.10, and [**3.11**](https://apps.microsoft.com/store/detail/python-311/9NRWMJP3717K?hl=en-us&gl=us))
+3. Find the latest version of Python from Microsoft (currently lists 3.7, 3.8, 3.9, 3.10, 3.11, and [**3.12**](https://apps.microsoft.com/detail/python-3-12/9NCVDN91XZQP?hl=en-us&gl=US))
 4. Install from the Microsoft Store
 5. Close all terminal and command prompt windows
 6. Run `python -V` in a new terminal window to verify you have Python now working
@@ -131,7 +131,7 @@ The Windows Store version of Python is a good option. It's the easiest way to ge
 **Pros**
 
 * Will keep Python up-to-date on your system as long as you periodically run the upgrade command
-* Will update across versions (e.g. 3.10 -> 3.11)
+* Will update across versions (e.g. 3.11 -> 3.12)
 * Can inform you of pending upgrade if upgrade command is run
 
 **Cons**
@@ -194,7 +194,7 @@ The output should be one of the following (*version numbers will vary*). Do not 
 
 ```
 $ python3 -V
-Python 3.11.0
+Python 3.12.0
 ```
 
 If you see this and the reported version number is sufficiently high (often 3.9 or higher), **you are good to go**. 
@@ -234,7 +234,7 @@ Looks like you do not have Python 3 at all. **You will need to continue below to
 **Pros**
 
 * Will keep Python up-to-date on your system as long as you periodically run the upgrade command
-* Will update across versions (e.g. 3.10 -> 3.11)
+* Will update across versions (e.g. 3.11 -> 3.12)
 * Can inform you of pending upgrade if upgrade command is run
 
 **Cons**
@@ -291,7 +291,7 @@ The Python official installer can be found on **[python.org](http://python.org)*
 
 * Generally uses [conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) rather than [Python's virtual environments](https://www.geeksforgeeks.org/python-virtual-environment/) - this can lead to a mismatch in instructions when Anaconda is not the primary tool used.
 * Packages available here often lag behind in release schedule from PyPI / pip
-* Often one whole version behind on Python (e.g. 3.10 rather than 3.11)
+* Often one whole version behind on Python (e.g. 3.11 rather than 3.12)
 
 **Install steps - Anaconda distribution on Windows**
 
@@ -324,10 +324,10 @@ The output should be one of the following (*version numbers will vary*). Don't t
 
 ```
 $ python3 -V
-Python 3.11.0
+Python 3.12.0
 ```
 
-If you see this and the reported version number is sufficiently high (often 3.9 or higher), **you are good to go**. 
+If you see this and the reported version number is sufficiently high (often 3.10 or higher), **you are good to go**. 
 
 #### 2.7? Uh oh, your Python is badly outdated!
 
@@ -366,13 +366,13 @@ Ubuntu manages it's installed software using **[apt](https://ubuntu.com/server/d
 **Pros**
 
 * Will keep Python up-to-date on your system as long as you periodically run the upgrade command
-* Will update across versions (e.g. 3.10 -> 3.11)
+* Will update across versions (e.g. 3.11 -> 3.12)
 * Can inform you of pending upgrade if upgrade command is run
 
 **Cons**
 
 * Requires root permissions
-* Often lags badly behind the latest version (currently about 1.5 years behind)
+* Often lags badly behind the latest version (sometimes about 1.5 years behind)
 
 **Install steps - apt package manager on Ubuntu**
 
@@ -399,7 +399,7 @@ Ubuntu manages it's installed software using **[apt](https://ubuntu.com/server/d
 
 * Generally uses [conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) rather than [Python's virtual environments](https://www.geeksforgeeks.org/python-virtual-environment/) - this can lead to a mismatch in instructions when Anaconda is not the primary tool used.
 * Packages available here often lag behind in release schedule from PyPI / pip
-* Often one whole version behind on Python (e.g. 3.9 rather than 3.10)
+* Often one whole version behind on Python (e.g. 3.11 rather than 3.12)
 
 **Install steps - Anaconda distribution on Ubuntu**
 
@@ -432,14 +432,14 @@ While we would not generally recommend building Python 3 from source, if you nee
 3. Install the build tools: `sudo apt-get install -y build-essential checkinstall`
 4. Add additional libraries needed by Python to build: `apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libffi-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev`
 5. Change into the src directory: `cd /usr/src`
-6. Get the latest source from [python.org/downloads/source](https://www.python.org/downloads/source/) and wget it locally, e.g.: `sudo wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz`
-7. Decompress it (varies by version):  `sudo tar xzf Python-3.11.0.tgz`
-8. Change into the created directory (varies by version): `cd Python-3.11.0`
+6. Get the latest source from [python.org/downloads/source](https://www.python.org/downloads/source/) and wget it locally, e.g.: `sudo wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz`
+7. Decompress it (varies by version):  `sudo tar xzf Python-3.12.0.tgz`
+8. Change into the created directory (varies by version): `cd Python-3.12.0`
 9. Prepare it for compilation: `sudo ./configure --enable-optimizations`
 10. Compile it without modifying system Python: `sudo make altinstall`
-11. Verify this version was built (varies by version): `python3.11 --version`
-12. Use `python3.11` instead of `python` or `python3` commands
-13. Consider creating an [alias](https://www.howtogeek.com/73768/how-to-use-aliases-to-customize-ubuntu-commands/) of `python3.11` to `python` in your shell profile.
+11. Verify this version was built (varies by version): `python3.12 --version`
+12. Use `python3.12` instead of `python` or `python3` commands
+13. Consider creating an [alias](https://www.howtogeek.com/73768/how-to-use-aliases-to-customize-ubuntu-commands/) of `python3.12` to `python` in your shell profile.
 
 There is a [nice write up of this procedure over here](https://towardsdatascience.com/building-python-from-source-on-ubuntu-20-04-2ed29eec152b).
 
