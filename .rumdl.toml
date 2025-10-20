@@ -1,0 +1,26 @@
+# Global settings
+line-length = 10000
+exclude = ["node_modules", "build", "dist"]
+respect-gitignore = true
+
+# Disable specific rules
+disabled-rules = ["MD013", "MD033"]
+
+# Configure individual rules
+[MD007]
+indent = 2
+
+[MD013]
+line-length = 10000
+code-blocks = false
+tables = false
+
+#[MD025]
+#level = 1
+#front-matter-title = "title"
+
+[MD044]
+names = ["rumdl", "Markdown", "GitHub"]
+
+[MD048]
+code-fence-style = "backtick"
