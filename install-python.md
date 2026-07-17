@@ -15,11 +15,12 @@ The process is just two steps:
 
 That's it! Jump to your operating system to get started:
 
-* [**Windows**](#windows)
-* [**macOS**](#macos)
-* [**Linux**](#linux)
+- [**Windows**](#windows)
+- [**macOS**](#macos)
+- [**Linux**](#linux)
 
 <a id="windows" style="margin-bottom: 10px; display: inline-block;"></a>
+
 _________________________
 
 ## Windows
@@ -70,6 +71,7 @@ Python 3.14.6
 **You're all set!** 🎉
 
 <a id="macos" style="margin-bottom: 10px; display: inline-block;"></a>
+
 _________________________
 
 ## macOS
@@ -120,6 +122,7 @@ Python 3.14.6
 **You're all set!** 🎉
 
 <a id="linux" style="margin-bottom: 10px; display: inline-block;"></a>
+
 _________________________
 
 ## Linux
@@ -271,10 +274,10 @@ _________________________
 
 One tool. No complexity. Just Python.
 
--------------------------------
+_________________________
 
 ## Corrections and Improvements
 
-If you find a problem or have a suggestion to make this page better, please visit the GitHub repository here. Note that this is not intended for tech support but rather for genuine, broadly applicable improvements to the instructions:
+If you find a problem or have a suggestion to make this page better, please open an issue on GitHub. Note that this is not intended for tech support but rather for genuine, broadly applicable improvements to the instructions:
 
-[**https://github.com/talkpython/installing-python**](https://github.com/talkpython/installing-python)
+[**talkpython/installing-python**](https://github.com/talkpython/installing-python)
