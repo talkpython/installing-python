@@ -4,7 +4,7 @@ exclude = ["node_modules", "build", "dist"]
 respect-gitignore = true
 
 # Disable specific rules
-disabled-rules = ["MD013", "MD033"]
+disable = ["MD013", "MD033"]
 
 # Configure individual rules
 [MD007]
@@ -23,4 +23,4 @@ tables = false
 names = ["rumdl", "Markdown", "GitHub"]
 
 [MD048]
-code-fence-style = "backtick"
+style = "backtick"

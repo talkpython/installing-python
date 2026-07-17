@@ -2,9 +2,9 @@
 
 <img src="https://training.talkpython.fm/static/img/cms/nopy-final.jpg" style="border-radius: 10px; display: block;" class="img img-responsive" />
 
-Welcome soon-to-be Python user! Python is one of the easiest programming languages to learn and grow with. But there can be a bump right at the beginning: **making sure you have Python installed** with a sufficiently new version (3.12+ is recommended these days).
+Welcome soon-to-be Python user! Python is one of the easiest programming languages to learn and grow with. But there can be a bump right at the beginning: **making sure you have Python installed** with a sufficiently new version (3.14 is the current release, and it's what we'll install below).
 
-Good news! In 2025, installing Python has become incredibly simple thanks to **[uv](https://docs.astral.sh/uv/)** -- a blazing-fast Python package and project manager that also handles Python installation. With uv, you get **one tool** that works the same way on Windows, macOS, and Linux. [Hear all about it](https://talkpython.fm/episodes/show/476/unified-python-packaging-with-uv) on Talk Python.
+Good news! These days, installing Python has become incredibly simple thanks to **[uv](https://docs.astral.sh/uv/)** -- a blazing-fast Python package and project manager that also handles Python installation. With uv, you get **one tool** that works the same way on Windows, macOS, and Linux. [Hear all about it](https://talkpython.fm/episodes/show/476/unified-python-packaging-with-uv) on Talk Python.
 
 ## The Modern Approach: Install uv, Then Python
 
@@ -39,27 +39,32 @@ After installation completes, **close and reopen your terminal** for the changes
 Now install Python 3.14 with a single command:
 
 ```powershell
-uv python install 3.14
+uv python install 3.14 --default
 ```
+
+The `--default` flag is what gives you a plain `python` command (rather than only `python3.14`), so this is the version you'll get by default from now on.
 
 You'll see output like:
 
+```text
+Installed Python 3.14.6 in 2.1s
+ + cpython-3.14.6-windows-x86_64-none (python, python3, python3.14)
 ```
-Searching for Python 3.14
-Installed Python 3.14.2 in 2.34s
- + cpython-3.14.2-windows-x86_64-none
-```
+
+Your exact patch version and install time will differ — Python ships regular patch releases, so 3.14.7 or later is just as good. uv also prints a `warning:` noting that `--default` is experimental. That's expected, and nothing is wrong: the flag works, it just isn't finalized yet.
 
 ### Step 3. Verify It Works
 
+**Close and reopen your terminal**, then run:
+
 ```powershell
-uv run python -V
+python -V
 ```
 
 You should see:
 
-```
-Python 3.14.2
+```text
+Python 3.14.6
 ```
 
 **You're all set!** 🎉
@@ -84,31 +89,32 @@ After installation completes, **close and reopen your terminal** for the changes
 Now install Python 3.14 with a single command:
 
 ```bash
-uv python install 3.14
+uv python install 3.14 --default
 ```
+
+The `--default` flag is what gives you a plain `python` command (rather than only `python3.14`), so this is the version you'll get by default from now on.
 
 You'll see output like:
 
+```text
+Installed Python 3.14.6 in 1.9s
+ + cpython-3.14.6-macos-aarch64-none (python, python3, python3.14)
 ```
-Searching for Python 3.14
-Installed Python 3.14.2 in 1.89s
- + cpython-3.14.2-macos-aarch64-none
-```
+
+Your exact patch version and install time will differ — Python ships regular patch releases, so 3.14.7 or later is just as good. uv also prints a `warning:` noting that `--default` is experimental. That's expected, and nothing is wrong: the flag works, it just isn't finalized yet.
 
 ### Step 3. Verify It Works
 
+**Close and reopen your terminal**, then run:
+
 ```bash
 python -V
-
-# or
-
-uv run python -V
 ```
 
 You should see:
 
-```
-Python 3.14.2
+```text
+Python 3.14.6
 ```
 
 **You're all set!** 🎉
@@ -133,31 +139,32 @@ After installation completes, **close and reopen your terminal** (or run `source
 Now install Python 3.14 with a single command:
 
 ```bash
-uv python install 3.14
+uv python install 3.14 --default
 ```
+
+The `--default` flag is what gives you a plain `python` command (rather than only `python3.14`), so this is the version you'll get by default from now on.
 
 You'll see output like:
 
+```text
+Installed Python 3.14.6 in 1.5s
+ + cpython-3.14.6-linux-x86_64-gnu (python, python3, python3.14)
 ```
-Searching for Python 3.14
-Installed Python 3.14.2 in 1.52s
- + cpython-3.14.2-linux-x86_64-gnu
-```
+
+Your exact patch version and install time will differ — Python ships regular patch releases, so 3.14.7 or later is just as good. uv also prints a `warning:` noting that `--default` is experimental. That's expected, and nothing is wrong: the flag works, it just isn't finalized yet.
 
 ### Step 3. Verify It Works
 
+**Close and reopen your terminal** (or run `source ~/.bashrc` or `source ~/.zshrc`), then run:
+
 ```bash
 python -V
-
-# or 
-
-uv run python -V
 ```
 
 You should see:
 
-```
-Python 3.14.2
+```text
+Python 3.14.6
 ```
 
 **You're all set!** 🎉
@@ -181,20 +188,30 @@ This creates a `.venv` folder in your project. If Python 3.14 isn't already inst
 ### Activating the Virtual Environment
 
 **Windows (PowerShell):**
+
 ```powershell
 .venv\Scripts\Activate.ps1
 ```
 
 **macOS / Linux:**
+
 ```bash
 source .venv/bin/activate
 ```
 
-Once activated, you can use `python` directly:
+Activating doesn't just make `python` available — it changes which Python `python` means. Instead of the global 3.14 you installed earlier, it now points at this project's interpreter, which can be an entirely different version:
 
 ```bash
 python -V
 ```
+
+In a project created with `uv venv --python 3.12`, that reports:
+
+```text
+Python 3.12.13
+```
+
+When you're finished working on the project, run `deactivate` and `python` goes back to your global 3.14.
 
 ### Installing Packages
 
@@ -220,7 +237,9 @@ Need multiple Python versions? uv handles that too:
 uv python install 3.12 3.13 3.14
 ```
 
-List installed versions:
+Note there's no `--default` here. Only one version at a time can own the plain `python` command, so leave `--default` off when installing extra versions — otherwise you'll quietly repoint `python` at whichever version you installed last. Each version is always reachable by its full name (`python3.12`, `python3.13`) regardless.
+
+List installed versions, including any that came with your system:
 
 ```bash
 uv python list
@@ -230,6 +249,12 @@ Create a virtual environment with a specific version:
 
 ```bash
 uv venv --python 3.12
+```
+
+Want to move `python` to a different version later? Re-run the install with `--default`:
+
+```bash
+uv python install 3.13 --default
 ```
 
 _________________________
