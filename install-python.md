@@ -1,6 +1,6 @@
-# Installing Python 3
+# How to Install Python 3.14 with uv
 
-<img src="https://training.talkpython.fm/static/img/cms/nopy-final.jpg" style="border-radius: 10px; display: block;" class="img img-responsive" />
+<img src="https://training.talkpython.fm/static/img/cms/python-not-found.webp" style="border-radius: 10px; display: block;" class="img img-responsive" />
 
 Welcome, soon-to-be Python user! Python is one of the easiest programming languages to learn and grow with. But there can be a bump right at the beginning: **making sure you have Python installed** with a sufficiently new version (3.14 is the current release, and it's what we'll install below).
 
@@ -17,11 +17,9 @@ That's it! Jump to your operating system to get started:
 
 - [**Windows**](#windows)
 - [**macOS**](#macos)
-- [**Linux**](#linux)
+- [**Linux**](#linux)<a id="windows" style="margin-bottom: 10px; display: inline-block;"></a>
 
-<a id="windows" style="margin-bottom: 10px; display: inline-block;"></a>
-
-_________________________
+<hr>
 
 ## Windows
 
@@ -68,11 +66,8 @@ Python 3.14.6
 
 If PowerShell says `python` isn't recognized, close and reopen your terminal so it picks up the updated `PATH`, then try again.
 
-**You're all set!** 🎉
-
-<a id="macos" style="margin-bottom: 10px; display: inline-block;"></a>
-
-_________________________
+**You're all set!** 🎉<a id="macos" style="margin-bottom: 10px; display: inline-block;"></a>
+<hr>
 
 ## macOS
 
@@ -119,10 +114,7 @@ Python 3.14.6
 
 If you get a `command not found` error, close and reopen your terminal so it picks up the updated `PATH`, then try again.
 
-**You're all set!** 🎉
-
-<a id="linux" style="margin-bottom: 10px; display: inline-block;"></a>
-
+**You're all set!** 🎉<a id="linux" style="margin-bottom: 10px; display: inline-block;"></a>
 _________________________
 
 ## Linux
@@ -171,7 +163,6 @@ Python 3.14.6
 If you get a `command not found` error, close and reopen your terminal (or run `source ~/.bashrc` or `source ~/.zshrc`) so it picks up the updated `PATH`, then try again.
 
 **You're all set!** 🎉
-
 _________________________
 
 ## Working with Python Projects
@@ -229,7 +220,6 @@ Or add dependencies to a project:
 ```bash
 uv add requests
 ```
-
 _________________________
 
 ## Managing Multiple Python Versions
@@ -259,7 +249,6 @@ Want to move `python` to a different version later? Re-run the install with `--d
 ```bash
 uv python install 3.13 --default
 ```
-
 _________________________
 
 ## Why uv?
@@ -273,7 +262,6 @@ _________________________
 - 🖥️ **Cross-platform** - works identically on Windows, macOS, and Linux
 
 One tool. No complexity. Just Python.
-
 _________________________
 
 ## Corrections and Improvements
@@ -281,3 +269,8 @@ _________________________
 If you find a problem or have a suggestion to make this page better, please open an issue on GitHub. Note that this is not intended for tech support but rather for genuine, broadly applicable improvements to the instructions:
 
 [**https://github.com/talkpython/installing-python**](https://github.com/talkpython/installing-python)
+
+<style>
+hr {	margin-top: 0px;	}
+.landing-cms ul,.landing-cms ol {	margin-bottom:.5em;	}
+</style>
