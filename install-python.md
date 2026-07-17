@@ -1,6 +1,11 @@
 # How to Install Python 3.14 with uv
 
-<img src="https://training.talkpython.fm/static/img/cms/python-not-found.webp" style="border-radius: 10px; display: block;" class="img img-responsive" />
+<img src="https://training.talkpython.fm/static/img/cms/python-not-found.webp" alt="A terminal window showing a 'python: command not found' error — the problem this guide solves" style="border-radius: 10px; display: block;" class="img img-responsive" />
+
+**Last updated:** July 16, 2026 · **Covers:** Python 3.14 · **By:** [Michael Kennedy](https://talkpython.fm/), host of the [Talk Python To Me](https://talkpython.fm/) podcast
+
+tl;dr; **To install Python 3.14 on Windows, macOS, or Linux, you run two commands:** first install [uv](https://docs.astral.sh/uv/), then run `uv python install 3.14 --default`. That's the whole process - no installer wizard, no decision tree, no editing your `PATH`, and the same two steps on every operating system. Copy-paste instructions for each platform are below.
+<hr>
 
 Welcome, soon-to-be Python user! Python is one of the easiest programming languages to learn and grow with. But there can be a bump right at the beginning: **making sure you have Python installed** with a sufficiently new version (3.14 is the current release, and it's what we'll install below).
 
@@ -21,9 +26,9 @@ That's it! Jump to your operating system to get started:
 
 <hr>
 
-## Windows
+## How to Install Python on Windows
 
-### Step 1. Install uv
+### Step 1. Install uv on Windows
 
 Open [**PowerShell**](https://learn.microsoft.com/en-us/powershell/scripting/windows-powershell/starting-windows-powershell) or [**Windows Terminal**](https://apps.microsoft.com/detail/9n0dx20hk701) and run:
 
@@ -33,7 +38,7 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 After installation completes, **close and reopen your terminal** for the changes to take effect.
 
-### Step 2. Install Python
+### Step 2. Install Python on Windows
 
 Now install Python 3.14 with a single command:
 
@@ -52,7 +57,7 @@ Installed Python 3.14.6 in 2.1s
 
 Your exact patch version and install time will differ. Python ships regular patch releases, so 3.14.7 or later is just as good. uv also prints a `warning:` noting that `--default` is experimental. That's expected, and nothing is wrong. The flag works; it just isn't finalized yet.
 
-### Step 3. Verify It Works
+### Step 3. Verify Python Works on Windows
 
 ```powershell
 python -V
@@ -69,9 +74,9 @@ If PowerShell says `python` isn't recognized, close and reopen your terminal so 
 **You're all set!** 🎉<a id="macos" style="margin-bottom: 10px; display: inline-block;"></a>
 <hr>
 
-## macOS
+## How to Install Python on macOS
 
-### Step 1. Install uv
+### Step 1. Install uv on macOS
 
 Open the [**Terminal**](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) and run:
 
@@ -81,7 +86,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 After installation completes, **close and reopen your terminal** for the changes to take effect.
 
-### Step 2. Install Python
+### Step 2. Install Python on macOS
 
 Now install Python 3.14 with a single command:
 
@@ -100,7 +105,7 @@ Installed Python 3.14.6 in 1.9s
 
 Your exact patch version and install time will differ. Python ships regular patch releases, so 3.14.7 or later is just as good. uv also prints a `warning:` noting that `--default` is experimental. That's expected, and nothing is wrong. The flag works; it just isn't finalized yet.
 
-### Step 3. Verify It Works
+### Step 3. Verify Python Works on macOS
 
 ```bash
 python -V
@@ -117,9 +122,9 @@ If you get a `command not found` error, close and reopen your terminal so it pic
 **You're all set!** 🎉<a id="linux" style="margin-bottom: 10px; display: inline-block;"></a>
 _________________________
 
-## Linux
+## How to Install Python on Linux
 
-### Step 1. Install uv
+### Step 1. Install uv on Linux
 
 Open a [**terminal**](https://ubuntu.com/tutorials/command-line-for-beginners) and run:
 
@@ -129,7 +134,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 After installation completes, **close and reopen your terminal** (or run `source ~/.bashrc` or `source ~/.zshrc`) for the changes to take effect.
 
-### Step 2. Install Python
+### Step 2. Install Python on Linux
 
 Now install Python 3.14 with a single command:
 
@@ -148,7 +153,7 @@ Installed Python 3.14.6 in 1.5s
 
 Your exact patch version and install time will differ. Python ships regular patch releases, so 3.14.7 or later is just as good. uv also prints a `warning:` noting that `--default` is experimental. That's expected, and nothing is wrong. The flag works; it just isn't finalized yet.
 
-### Step 3. Verify It Works
+### Step 3. Verify Python Works on Linux
 
 ```bash
 python -V
@@ -255,7 +260,7 @@ _________________________
 
 **[uv](https://docs.astral.sh/uv/)** is developed by [Astral](https://astral.sh/), the creators of [Ruff](https://docs.astral.sh/ruff/) (the popular Python linter). It's designed to be:
 
-- ⚡️ **Blazing fast** - 10-100x faster than pip
+- ⚡️ **Blazing fast** - 10-100x faster than pip ([see Astral's benchmarks](https://github.com/astral-sh/uv/blob/main/BENCHMARKS.md))
 - 🐍 **Python version manager** - installs and manages Python itself
 - 📦 **Package manager** - replaces pip, pip-tools, and virtualenv
 - 🔒 **Lockfile support** - reproducible environments

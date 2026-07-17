@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- **Answer-first opening.** The guide now leads with the actual answer — install uv, then run `uv python install 3.14 --default` — before the welcome. Previously the first text was a greeting and the two commands didn't appear until a third of the way down, so anything quoting the top of the article (search snippets, AI assistants) found no answer to "how do I install Python."
+- **Attribution and freshness line** under the title (last updated, Python version covered, author). Readers landing cold couldn't tell whether the guide was from 2019 or last week, which matters more here than on most pages because installing Python has changed so much.
+- **Source link for the "10-100x faster than pip" claim**, pointing at Astral's published benchmarks. It was the most quotable number in the article and the only one with nothing behind it.
+- **Alt text on the `python: command not found` screenshot.** It was the first element after the title and was announced as nothing at all to screen readers.
+
+### Changed
+
+- **Per-OS step headings are now self-contained.** `Step 1. Install uv` appeared three times identically, under Windows, macOS, and Linux, with different and mutually incompatible commands underneath. Anything that reads the article by section — including AI assistants — had three identically-labeled sections to choose from, and could hand a Windows reader the `curl` command. Each heading now names its OS (`Step 1. Install uv on Windows`), and the OS `##` headings match how people actually search ("How to Install Python on Windows"). The hand-rolled `#windows` / `#macos` / `#linux` jump-link anchors are unaffected.
+
 ## [2026.07.16] - python-default-flag
 
 ### Fixed
