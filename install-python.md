@@ -2,13 +2,13 @@
 
 <img src="https://training.talkpython.fm/static/img/cms/nopy-final.jpg" style="border-radius: 10px; display: block;" class="img img-responsive" />
 
-Welcome soon-to-be Python user! Python is one of the easiest programming languages to learn and grow with. But there can be a bump right at the beginning: **making sure you have Python installed** with a sufficiently new version (3.14 is the current release, and it's what we'll install below).
+Welcome, soon-to-be Python user! Python is one of the easiest programming languages to learn and grow with. But there can be a bump right at the beginning: **making sure you have Python installed** with a sufficiently new version (3.14 is the current release, and it's what we'll install below).
 
-Good news! These days, installing Python has become incredibly simple thanks to **[uv](https://docs.astral.sh/uv/)** -- a blazing-fast Python package and project manager that also handles Python installation. With uv, you get **one tool** that works the same way on Windows, macOS, and Linux. [Hear all about it](https://talkpython.fm/episodes/show/476/unified-python-packaging-with-uv) on Talk Python.
+The good news is that these days, installing Python is incredibly simple thanks to **[uv](https://docs.astral.sh/uv/)**, a blazing-fast Python package and project manager that also handles Python installation. With uv, you get **one tool** that works the same way on Windows, macOS, and Linux. [Hear all about it](https://talkpython.fm/episodes/show/476/unified-python-packaging-with-uv) on Talk Python.
 
 ## The Modern Approach: Install uv, Then Python
 
-The process is just two steps:
+The process is just two commands:
 
 1. **Install uv** (one command)
 2. **Install Python with uv** (one command)
@@ -43,7 +43,7 @@ Now install Python 3.14 with a single command:
 uv python install 3.14 --default
 ```
 
-The `--default` flag is what gives you a plain `python` command (rather than only `python3.14`), so this is the version you'll get by default from now on.
+The `--default` flag gives you a plain `python` command rather than only `python3.14`, so this becomes the Python you get from now on.
 
 You'll see output like:
 
@@ -52,11 +52,9 @@ Installed Python 3.14.6 in 2.1s
  + cpython-3.14.6-windows-x86_64-none (python, python3, python3.14)
 ```
 
-Your exact patch version and install time will differ — Python ships regular patch releases, so 3.14.7 or later is just as good. uv also prints a `warning:` noting that `--default` is experimental. That's expected, and nothing is wrong: the flag works, it just isn't finalized yet.
+Your exact patch version and install time will differ. Python ships regular patch releases, so 3.14.7 or later is just as good. uv also prints a `warning:` noting that `--default` is experimental. That's expected, and nothing is wrong. The flag works; it just isn't finalized yet.
 
 ### Step 3. Verify It Works
-
-**Close and reopen your terminal**, then run:
 
 ```powershell
 python -V
@@ -67,6 +65,8 @@ You should see:
 ```text
 Python 3.14.6
 ```
+
+If PowerShell says `python` isn't recognized, close and reopen your terminal so it picks up the updated `PATH`, then try again.
 
 **You're all set!** 🎉
 
@@ -94,7 +94,7 @@ Now install Python 3.14 with a single command:
 uv python install 3.14 --default
 ```
 
-The `--default` flag is what gives you a plain `python` command (rather than only `python3.14`), so this is the version you'll get by default from now on.
+The `--default` flag gives you a plain `python` command rather than only `python3.14`, so this becomes the Python you get from now on.
 
 You'll see output like:
 
@@ -103,11 +103,9 @@ Installed Python 3.14.6 in 1.9s
  + cpython-3.14.6-macos-aarch64-none (python, python3, python3.14)
 ```
 
-Your exact patch version and install time will differ — Python ships regular patch releases, so 3.14.7 or later is just as good. uv also prints a `warning:` noting that `--default` is experimental. That's expected, and nothing is wrong: the flag works, it just isn't finalized yet.
+Your exact patch version and install time will differ. Python ships regular patch releases, so 3.14.7 or later is just as good. uv also prints a `warning:` noting that `--default` is experimental. That's expected, and nothing is wrong. The flag works; it just isn't finalized yet.
 
 ### Step 3. Verify It Works
-
-**Close and reopen your terminal**, then run:
 
 ```bash
 python -V
@@ -118,6 +116,8 @@ You should see:
 ```text
 Python 3.14.6
 ```
+
+If you get a `command not found` error, close and reopen your terminal so it picks up the updated `PATH`, then try again.
 
 **You're all set!** 🎉
 
@@ -145,7 +145,7 @@ Now install Python 3.14 with a single command:
 uv python install 3.14 --default
 ```
 
-The `--default` flag is what gives you a plain `python` command (rather than only `python3.14`), so this is the version you'll get by default from now on.
+The `--default` flag gives you a plain `python` command rather than only `python3.14`, so this becomes the Python you get from now on.
 
 You'll see output like:
 
@@ -154,11 +154,9 @@ Installed Python 3.14.6 in 1.5s
  + cpython-3.14.6-linux-x86_64-gnu (python, python3, python3.14)
 ```
 
-Your exact patch version and install time will differ — Python ships regular patch releases, so 3.14.7 or later is just as good. uv also prints a `warning:` noting that `--default` is experimental. That's expected, and nothing is wrong: the flag works, it just isn't finalized yet.
+Your exact patch version and install time will differ. Python ships regular patch releases, so 3.14.7 or later is just as good. uv also prints a `warning:` noting that `--default` is experimental. That's expected, and nothing is wrong. The flag works; it just isn't finalized yet.
 
 ### Step 3. Verify It Works
-
-**Close and reopen your terminal** (or run `source ~/.bashrc` or `source ~/.zshrc`), then run:
 
 ```bash
 python -V
@@ -169,6 +167,8 @@ You should see:
 ```text
 Python 3.14.6
 ```
+
+If you get a `command not found` error, close and reopen your terminal (or run `source ~/.bashrc` or `source ~/.zshrc`) so it picks up the updated `PATH`, then try again.
 
 **You're all set!** 🎉
 
@@ -186,7 +186,7 @@ Navigate to your project folder and run:
 uv venv --python 3.14
 ```
 
-This creates a `.venv` folder in your project. If Python 3.14 isn't already installed, **uv will automatically download and install it for you**.
+This creates a `.venv` folder in your project. If Python 3.14 isn't already installed, **uv will automatically download and install it for you**. On a fast connection, this can take as little as 2-3 seconds.
 
 ### Activating the Virtual Environment
 
@@ -202,7 +202,7 @@ This creates a `.venv` folder in your project. If Python 3.14 isn't already inst
 source .venv/bin/activate
 ```
 
-Activating doesn't just make `python` available — it changes which Python `python` means. Instead of the global 3.14 you installed earlier, it now points at this project's interpreter, which can be an entirely different version:
+Activating doesn't just make `python` available - it changes which interpreter `python` points to. Instead of the global 3.14 you installed earlier, you get this project's own Python, which can be an entirely different version:
 
 ```bash
 python -V
@@ -240,7 +240,7 @@ Need multiple Python versions? uv handles that too:
 uv python install 3.12 3.13 3.14
 ```
 
-Note there's no `--default` here. Only one version at a time can own the plain `python` command, so leave `--default` off when installing extra versions — otherwise you'll quietly repoint `python` at whichever version you installed last. Each version is always reachable by its full name (`python3.12`, `python3.13`) regardless.
+Note there's no `--default` here. Only one version at a time can own the plain `python` command, so leave `--default` off when installing extra versions. Otherwise you'll quietly repoint `python` at whichever version you installed last. Each version is always reachable by its full name (`python3.12`, `python3.13`) regardless.
 
 List installed versions, including any that came with your system:
 
@@ -266,11 +266,11 @@ _________________________
 
 **[uv](https://docs.astral.sh/uv/)** is developed by [Astral](https://astral.sh/), the creators of [Ruff](https://docs.astral.sh/ruff/) (the popular Python linter). It's designed to be:
 
-- ⚡️ **Blazing fast** -- 10-100x faster than pip
-- 🐍 **Python version manager** -- installs and manages Python itself
-- 📦 **Package manager** -- replaces pip, pip-tools, and virtualenv
-- 🔒 **Lockfile support** -- reproducible environments
-- 🖥️ **Cross-platform** -- works identically on Windows, macOS, and Linux
+- ⚡️ **Blazing fast** - 10-100x faster than pip
+- 🐍 **Python version manager** - installs and manages Python itself
+- 📦 **Package manager** - replaces pip, pip-tools, and virtualenv
+- 🔒 **Lockfile support** - reproducible environments
+- 🖥️ **Cross-platform** - works identically on Windows, macOS, and Linux
 
 One tool. No complexity. Just Python.
 
@@ -280,4 +280,4 @@ _________________________
 
 If you find a problem or have a suggestion to make this page better, please open an issue on GitHub. Note that this is not intended for tech support but rather for genuine, broadly applicable improvements to the instructions:
 
-[**talkpython/installing-python**](https://github.com/talkpython/installing-python)
+[**https://github.com/talkpython/installing-python**](https://github.com/talkpython/installing-python)

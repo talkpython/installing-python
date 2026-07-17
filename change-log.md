@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [2026.07.16] - python-default-flag
+
 ### Fixed
 
 - **`python -V` now actually works after following the guide.** `uv python install 3.14` only creates a versioned `python3.14` executable, so the macOS and Linux verification steps told readers to run `python -V` and expect success when they'd get `command not found`. All three platforms now install with `--default`, which creates the `python` and `python3` executables the guide promises.
@@ -13,15 +15,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Corrected sample command output, which showed a `Searching for Python 3.14` line that uv does not print and omitted the installed executable names.
 - Updated Python version references from 3.14.2 to 3.14.6, and resolved the intro contradiction between "3.12+ is recommended" and installing 3.14.
 - Rewrote the virtual environment explanation. It said "once activated, you can use `python` directly," which was only meaningful back when bare `python` didn't work at all. It now teaches what activation actually does: `python` switches from your global 3.14 to the project's interpreter, which may be a different version entirely.
-- Refreshed the README, which still described the guide as a "complex decision tree" — the exact thing the 2025 rewrite eliminated. Also added Linux (the guide covers it), linked the changelog, and fixed punctuation.
+- Refreshed the README, which still described the guide as a "complex decision tree". That's the exact thing the 2025 rewrite eliminated. Also added Linux (the guide covers it), linked the changelog, and fixed punctuation.
 - Fixed two silently-ignored keys in `.rumdl.toml`: `disabled-rules` → `disable` and `MD048.code-fence-style` → `MD048.style`. Because the disable list never loaded, the guide's intentional inline HTML was being flagged on every run.
+- Stopped `rumdl fmt` from rewriting the repo link to display `https://GitHub.com/...`. MD044's proper-name rule was capitalizing the URL in the link text on every run. The link text is now descriptive rather than a raw URL.
 
 ### Added
 
 - Note that `--default` emits an experimental warning, so readers don't think the install failed.
 - Note that the patch version and install time in sample output will differ, so the page doesn't read as wrong the moment 3.14.7 ships.
 - Warning against using `--default` when installing multiple Python versions, plus how to intentionally repoint `python` at a different version later.
-- Explicit "close and reopen your terminal" reminder in each verification step.
+- `PATH` troubleshooting fallback in each verification step, phrased per platform, for anyone whose terminal hasn't picked up the new executables.
+
+### Changed
+
+- Prose pass over the guide and README: replaced em dashes with plain hyphens or shorter sentences, tightened the `--default` explanation, and corrected the "two steps" promise that was followed by three.
+- Applied `rumdl fmt` for consistent list markers, horizontal rules, and blank lines.
 
 ## [2025.12.10] - python-2025-guide
 
